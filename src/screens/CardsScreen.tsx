@@ -90,7 +90,6 @@ export default function CardsScreen({ navigate }: Props) {
             <p className="font-['Young_Serif:Regular',sans-serif] leading-[normal] not-italic relative shrink-0 text-[15px] text-white">Recent Transactions</p>
             <div className="h-px relative shrink-0 w-full bg-[rgba(255,255,255,0.12)]" />
             {[
-              {[
   { merchant: "Facebook Headquarters", date: "2023", amount: "+$5,000,000.00", cat: "Deposit" },
   { merchant: "Opening Balance", date: "2023", amount: "+$13.00", cat: "Deposit" },
   { merchant: "Sarah Johnson", date: "Aug 26 · 11:09 AM", amount: "-$3,000.00", cat: "Transfer" },
