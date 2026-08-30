@@ -12,7 +12,7 @@ const RECIPIENTS = [
   { id: "4", name: "Marcus Taylor", initials: "MT", account: "•••• 9901" },
 ];
 
-const AVAILABLE_BALANCE = 240000;
+const AVAILABLE_BALANCE = 12450;
 
 export default function TransferScreen({ navigate }: Props) {
   const [recipient, setRecipient] = useState("");
@@ -153,7 +153,7 @@ export default function TransferScreen({ navigate }: Props) {
             </div>
             {exceedsAvailableBalance && (
               <p role="alert" className="font-['Geist:Medium',sans-serif] text-[13px] text-[#f87171]">
-                Insufficient funds. Enter an amount no greater than $240,000.00.
+                Insufficient funds. Enter an amount no greater than $12,450.00.
               </p>
             )}
             {/* Memo */}
