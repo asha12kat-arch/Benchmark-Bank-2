@@ -83,31 +83,34 @@ export default function CardsScreen({ navigate }: Props) {
               </div>
             ))}
           </div>
+{/* Recent Transactions */}
+<div className="bg-[#0b1524] content-stretch flex flex-col gap-[12px] items-start p-[16px] relative rounded-[20px] shrink-0 w-full" style={{boxShadow: "0px 10px 24px 0px rgba(139,26,43,0.12), 0px 18px 40px 0px rgba(0,0,0,0.2)"}}>
+  <div aria-hidden className="absolute border border-[rgba(255,255,255,0.08)] border-solid inset-0 pointer-events-none rounded-[20px]" />
+  <p className="font-['Young_Serif:Regular',sans-serif] leading-[normal] not-italic relative shrink-0 text-[15px] text-white">Recent Transactions</p>
+  <div className="h-px relative shrink-0 w-full bg-[rgba(255,255,255,0.12)]" />
 
-          {/* Recent Transactions */}
-          <div className="bg-[#0b1524] content-stretch flex flex-col gap-[12px] items-start p-[16px] relative rounded-[20px] shrink-0 w-full" style={{boxShadow: "0px 10px 24px 0px rgba(139,26,43,0.12), 0px 18px 40px 0px rgba(0,0,0,0.2)"}}>
-            <div aria-hidden className="absolute border border-[rgba(255,255,255,0.08)] border-solid inset-0 pointer-events-none rounded-[20px]" />
-            <p className="font-['Young_Serif:Regular',sans-serif] leading-[normal] not-italic relative shrink-0 text-[15px] text-white">Recent Transactions</p>
-            <div className="h-px relative shrink-0 w-full bg-[rgba(255,255,255,0.12)]" />
-            {[
-  { merchant: "Facebook Headquarters", date: "2023", amount: "+$5,000,000.00", cat: "Deposit" },
-  { merchant: "Opening Balance", date: "2023", amount: "+$13.00", cat: "Deposit" },
-  { merchant: "Sarah Johnson", date: "Aug 26 · 11:09 AM", amount: "-$3,000.00", cat: "Transfer" },
-  { merchant: "Sarah Johnson", date: "Aug 27", amount: "+$3,000.00", cat: "Transfer Returned" },
-]}
-            ].map(({ merchant, date, amount, cat }) => (
-              <div key={merchant + date} className="content-stretch flex items-center gap-[12px] relative shrink-0 w-full">
-                <div className="bg-gradient-to-br from-[#1e293b] to-[#0f172a] flex items-center justify-center relative rounded-[12px] shrink-0 size-[40px]" style={{boxShadow: "inset 0 0 0 1px rgba(255,255,255,0.08)"}}>
-                  <span className="font-['Geist:Bold',sans-serif] text-[12px] text-white">{merchant[0]}</span>
-                </div>
-                <div className="flex-1 content-stretch flex flex-col gap-[2px] items-start relative shrink-0 min-w-0">
-                  <p className="font-['Geist:SemiBold',sans-serif] font-semibold relative shrink-0 text-[14px] text-white">{merchant}</p>
-                  <p className="font-['Geist:Regular',sans-serif] font-normal relative shrink-0 text-[#94a3b8] text-[12px]">{cat} · {date}</p>
-                </div>
-                <p className="font-['Geist:SemiBold',sans-serif] font-semibold relative shrink-0 text-[14px] text-[#f87171]">{amount}</p>
-              </div>
-            ))}
-          </div>
+  {[
+    { merchant: "Facebook Headquarters", date: "2023", amount: "+$5,000,000.00", cat: "Deposit" },
+    { merchant: "Opening Balance", date: "2023", amount: "+$13.00", cat: "Deposit" },
+    { merchant: "Sarah Johnson", date: "Aug 26 · 11:09 AM", amount: "-$3,000.00", cat: "Transfer" },
+    { merchant: "Sarah Johnson", date: "Aug 27", amount: "+$3,000.00", cat: "Transfer Returned" },
+  ].map(({ merchant, date, amount, cat }) => (
+    <div key={merchant + date} className="content-stretch flex items-center gap-[12px] relative shrink-0 w-full">
+      <div className="bg-gradient-to-br from-[#1e293b] to-[#0f172a] flex items-center justify-center relative rounded-[12px] shrink-0 size-[40px]" style={{boxShadow: "inset 0 0 0 1px rgba(255,255,255,0.08)"}}>
+        <span className="font-['Geist:Bold',sans-serif] text-[12px] text-white">{merchant[0]}</span>
+      </div>
+
+      <div className="flex-1 content-stretch flex flex-col gap-[2px] items-start relative shrink-0 min-w-0">
+        <p className="font-['Geist:SemiBold',sans-serif] font-semibold relative shrink-0 text-[14px] text-white">{merchant}</p>
+        <p className="font-['Geist:Regular',sans-serif] font-normal relative shrink-0 text-[#94a3b8] text-[12px]">{cat} · {date}</p>
+      </div>
+
+      <p className={`font-['Geist:SemiBold',sans-serif] font-semibold relative shrink-0 text-[14px] ${amount.startsWith("+") ? "text-[#15803d]" : "text-[#f87171]"}`}>
+        {amount}
+      </p>
+    </div>
+  ))}
+</div>
 
           <div className="h-4 shrink-0" />
         </div>
