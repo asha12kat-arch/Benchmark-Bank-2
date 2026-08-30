@@ -3,11 +3,10 @@ interface Props {
 }
 
 const TRANSACTIONS = [
-  { id: "1", merchant: "Transfer from Laura Bennett", category: "Transfer", date: "May 6, 1987", amount: 320000, icon: "L" },
-  { id: "2", merchant: "Transfer from Savings", category: "Transfer", date: "Sept. 19, 1990", amount: 2200000, icon: "S" },
-  { id: "3", merchant: "Transfer from George Miller", category: "Transfer", date: "Jan. 14, 1994", amount: 450000, icon: "G" },
-  { id: "4", merchant: "Transfer from Checking", category: "Transfer", date: "Aug. 22, 2001", amount: 600000, icon: "C" },
-  { id: "5", merchant: "Transfer from William Harris", category: "Transfer", date: "Mar. 11, 2004", amount: 950000, icon: "W" },
+  { id: "1", merchant: "Facebook Headquarters", category: "Deposit", date: "2023", amount: 5000000, icon: "F" },
+{ id: "2", merchant: "Opening Balance", category: "Deposit", date: "2023", amount: 13, icon: "O" },
+{ id: "3", merchant: "Sarah Johnson", category: "Transfer", date: "Aug. 26, 2026 · 11:09 AM", amount: -3000, icon: "S" },
+{ id: "4", merchant: "Sarah Johnson", category: "Transfer Returned", date: "Aug. 27, 2026", amount: 3000, icon: "S" },
 ];
 
 export default function HistoryScreen({ navigate }: Props) {
