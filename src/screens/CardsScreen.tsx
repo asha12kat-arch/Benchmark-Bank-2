@@ -90,10 +90,12 @@ export default function CardsScreen({ navigate }: Props) {
             <p className="font-['Young_Serif:Regular',sans-serif] leading-[normal] not-italic relative shrink-0 text-[15px] text-white">Recent Transactions</p>
             <div className="h-px relative shrink-0 w-full bg-[rgba(255,255,255,0.12)]" />
             {[
-              { merchant: "Amazon", date: "Aug 24", amount: "-$67.99", cat: "Shopping" },
-              { merchant: "Starbucks", date: "Aug 23", amount: "-$12.50", cat: "Food & Drink" },
-              { merchant: "Netflix", date: "Aug 22", amount: "-$15.99", cat: "Entertainment" },
-              { merchant: "Shell Gas", date: "Aug 21", amount: "-$48.30", cat: "Transportation" },
+              {[
+  { merchant: "Facebook Headquarters", date: "2023", amount: "+$5,000,000.00", cat: "Deposit" },
+  { merchant: "Opening Balance", date: "2023", amount: "+$13.00", cat: "Deposit" },
+  { merchant: "Sarah Johnson", date: "Aug 26 · 11:09 AM", amount: "-$3,000.00", cat: "Transfer" },
+  { merchant: "Sarah Johnson", date: "Aug 27", amount: "+$3,000.00", cat: "Transfer Returned" },
+]}
             ].map(({ merchant, date, amount, cat }) => (
               <div key={merchant + date} className="content-stretch flex items-center gap-[12px] relative shrink-0 w-full">
                 <div className="bg-gradient-to-br from-[#1e293b] to-[#0f172a] flex items-center justify-center relative rounded-[12px] shrink-0 size-[40px]" style={{boxShadow: "inset 0 0 0 1px rgba(255,255,255,0.08)"}}>
