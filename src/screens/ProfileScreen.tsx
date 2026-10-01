@@ -82,7 +82,7 @@ export default function ProfileScreen({ navigate }: Props) {
             {/* Avatar placeholder */}
             <div className="relative rounded-[40px] shrink-0 size-[80px]">
               <div className="absolute inset-0 rounded-[40px] bg-gradient-to-br from-[#1e293b] to-[#0f172a] flex items-center justify-center">
-                <span className="font-['Young_Serif:Regular',sans-serif] text-[28px] text-white">DH</span>
+                <span className="font-['Young_Serif:Regular',sans-serif] text-[28px] text-white">MW</span>
               </div>
               <div aria-hidden className="absolute border-2 border-[#8b1a2b] border-solid inset-0 rounded-[40px]" />
             </div>
@@ -106,7 +106,7 @@ export default function ProfileScreen({ navigate }: Props) {
             </div>
             <div className="h-px relative shrink-0 w-full bg-[rgba(255,255,255,0.12)]" />
             <div className="content-stretch flex flex-col gap-[10px] items-start relative shrink-0 w-full">
-              <InfoRow label="Account Holders" value="Donn Haughey / Donald Highouse" />
+              <InfoRow label="Account Holders" value="Michael Wiseman" />
               <InfoRow label="Account Type" value="Premium Checking" />
               <InfoRow label="Customer ID" value="BM-7829451" />
               <div className="content-stretch flex items-center justify-between relative shrink-0 w-full">
@@ -132,8 +132,8 @@ export default function ProfileScreen({ navigate }: Props) {
             <div className="h-px relative shrink-0 w-full bg-[rgba(255,255,255,0.12)]" />
             <div className="content-stretch flex flex-col gap-[10px] items-start relative shrink-0 w-full">
               <InfoRow label="DOB" value="05/10/1968" />
-              <InfoRow label="Phone" value="•••-•••-4523" />
-              <InfoRow label="Email" value="donaldhighhouse@outlook.com" />
+              <InfoRow label="Phone" value="•••-•••-2868" />
+              <InfoRow label="Email" value="wisemanmick8@gmail.com" />
             </div>
           </div>
 
